@@ -21,6 +21,7 @@ repositories {
 ext {
     set('springCloudVersion', "2021.0.2")
     set('mapstructVersion', "1.4.2.Final")
+    set('springdocOpenApi', "1.6.8")
 }
 
 dependencies {
@@ -28,6 +29,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.flywaydb:flyway-core'
     implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+    implementation "org.springdoc:springdoc-openapi-ui:${springdocOpenApi}"
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
