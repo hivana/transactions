@@ -8,7 +8,7 @@ The codebase was build with:
 - Spring Sleuth - distributed tracing;
 - Flyway - database versioning;
 - h2database - dev, postgresql - prod;
-- Springdoc - openapi v3.
+- Springdoc - swagger-ui - openapi v3.
 
 If you want to run it locally, you must have jdk17 as your JAVA_HOME, just run the following command:
 
