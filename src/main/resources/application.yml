@@ -34,3 +34,8 @@ spring:
   # FLYWAY CONFIG
   flyway:
     schemas: transactions
+
+metadata:
+  name: Transactions API
+  description: Technical test case for pismo
+  version: 1.0.0

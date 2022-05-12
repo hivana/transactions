@@ -4,6 +4,7 @@ import io.pismo.transactions.modules.transaction.dto.TransactionRequest;
 import io.pismo.transactions.modules.transaction.dto.TransactionResponse;
 import io.pismo.transactions.modules.transaction.dto.mapper.TransactionResponseMapper;
 import io.pismo.transactions.modules.transaction.service.TransactionService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -28,6 +29,7 @@ public class TransactionsController {
         this.transactionResponseMapper = transactionResponseMapper;
     }
 
+    @Operation(summary = "for creating a new transaction")
     @PostMapping
     public ResponseEntity<TransactionResponse> save(@RequestBody TransactionRequest request) {
 

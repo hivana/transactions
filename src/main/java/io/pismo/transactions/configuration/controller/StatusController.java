@@ -1,5 +1,6 @@
 package io.pismo.transactions.configuration.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ public class StatusController {
 
     private final Logger log = LoggerFactory.getLogger(StatusController.class);
 
+    @Operation(summary = "for requesting the api status")
     @GetMapping("status")
     public ResponseEntity<Map<String, Object>> getApiStatus() {
         Map<String, Object> response = Map.of(

@@ -5,6 +5,7 @@ import io.pismo.transactions.modules.account.dto.AccountRequest;
 import io.pismo.transactions.modules.account.dto.AccountResponse;
 import io.pismo.transactions.modules.account.dto.mapper.AccountResponseMapper;
 import io.pismo.transactions.modules.account.service.AccountService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,7 @@ public class AccountsController {
         this.accountResponseMapper = accountResponseMapper;
     }
 
+    @Operation(summary = "for creating a new account")
     @PostMapping
     public ResponseEntity<AccountResponse> save(@RequestBody AccountRequest request) {
 
@@ -38,6 +40,7 @@ public class AccountsController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
+    @Operation(summary = "for retrieving an account")
     @GetMapping(value = "{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AccountResponse> findById(@PathVariable(name = "id") Long id) {
 
